@@ -143,7 +143,11 @@ on_install() {
 set_permissions() {
   # The following is the default rule, DO NOT remove
   set_perm_recursive $MODPATH 0 0 0755 0644
-
+  set_perm  $MODPATH/system/vendor/lib/hw/camera.msm8953.so       0     0       0644
+  set_perm  $MODPATH/system/vendor/lib/android.frameworks.sensorservice@1.0-v27.so       0     0       0644
+  set_perm  $MODPATH/system/vendor/lib/libvidhance_gyro.so       0     0       0644
+  set_perm  $MODPATH/system/vendor/lib64/android.frameworks.sensorservice@1.0-v27.so       0     0       0644
+  
   # Here are some examples:
   # set_perm_recursive  $MODPATH/system/lib       0     0       0755      0644
   # set_perm  $MODPATH/system/bin/app_process32   0     2000    0755      u:object_r:zygote_exec:s0
